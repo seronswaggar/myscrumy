@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="27ef5bec-66d4-45f1-9393-e15e75ae89ce">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="bayodescrumy@localhost" uuid="76d3ef9a-9555-4070-ab13-2189ca70fe15">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+    </data-source>
+  </component>
+</project>

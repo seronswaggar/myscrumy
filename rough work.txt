@@ -1,0 +1,65 @@
+
+
+class ScrumyUser(models):
+    Name = models.TextField(max_length=300)
+    Age = models.IntegerField(max_length= 4)
+    Email= models.EmailField(max_length = 250)
+    Roles = models.TextField(max_length=100)
+
+class ScrumyGoals(models):
+    scrumyuser = models.ForeignKey(ScrumyUser, on_delete =models.CASCADE)
+    Task_1 = models.TextField(max_length = 500)
+    Task_2 = models.TextField(max_length = 500)
+    Task_3 = models.TextField(max_length = 500)
+    Task_4 = models.TextField(max_length = 500)
+class GoalStatus(models):
+    scrumyuser = models.ForeignKey(ScrumyUser, on_delete=models.CASCADE)
+    Verified = models.BooleanField(max_length =200)
+
+*******************************************************************************************************************************
+from django.utils import timezone
+
+
+
+class ScrumyUser(models.Model):
+    ScrumyUser_Role = (
+        ('O', 'Owner'),
+        ('A', 'Admin'),
+        ('D', 'Developer'),
+        ('QA', 'Quality Analyst')
+    )
+
+    Name= models.CharField(max_length=300)
+
+    def__str__(self):
+        return self.Name
+        self.save()
+
+class GoalStatus(models.Model):
+
+    Goal_Status=(
+        ('D','Done'),
+        ('P','Pending'),
+        ('V', 'Verified'),
+    )
+
+    ScrumyUser_Role = (
+        ('O', 'Owner'),
+        ('A', 'Admin'),
+        ('D', 'Developer'),
+        ('QA', 'Quality Analyst')
+    )
+
+
+
+
+
+
+
+class ScrumyGoals(models.Model):
+    scrumyuser = models.ForeignKey(ScrumyUser, on_delete =models.CASCADE)
+    Daily_task = models.CharField(max_length = 500)
+    Weekly_task = models.CharField(max_length = 500)
+    Monthly_task = models.CharField(max_length = 500)
+    Final_goal = models.CharField(max_length = 500)
+#
